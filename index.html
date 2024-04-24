@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Реферальная программа - SMARPOS</title>
+    <meta name="description" content="Реферальная программа - SMARPOS">
+    <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/toastify-js/src/toastify.min.css">
+    <link rel="stylesheet" href="styles/styles.css">
+</head>
+<body>
+    <header class="header">
+        <div class="container">
+            <div class="header__logo">
+                <a href="/">
+                    <img src="images/logotype.svg" alt="logo">
+                </a>
+            </div>
+            <div class="header__langs">
+                <div class="header__langs-opener">
+                    <div class="header__langs-selected">
+                        <span class="header__langs-flag">
+                            <img src="images/langs/russian.svg" alt="current-lang">
+                        </span>
+                        <span class="header__langs-arrow">
+                            <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M9.5 11.6901L6.44673 8.27732C6.11591 7.90756 5.57893 7.90756 5.24811 8.27732C4.9173 8.64709 4.9173 9.24729 5.24811 9.61706L8.93505 13.7381C9.24749 14.0873 9.75331 14.0873 10.0649 13.7381L13.7519 9.61706C14.0827 9.24729 14.0827 8.64709 13.7519 8.27732C13.4211 7.90756 12.8841 7.90756 12.5533 8.27732L9.5 11.6901Z" fill="black" fill-opacity="0.4"/>
+                            </svg>
+                        </span>
+                    </div>
+                </div>
+                <div class="header__langs-dropdown">
+                    <ul>
+                        <li>
+                            <a href="/" class="selected" data-code="ru">
+                                <img src="images/langs/russian.svg" alt="current-lang">
+                                <span>Ru</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="/?lang=uz" data-code="uz">
+                                <img src="images/langs/uz.svg" alt="current-lang">
+                                <span>Uz</span>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </header>
+    <main class="content" role="main">
+        <div class="container">
+            <div class="content__container">
+                <div class="form-block">
+                    <div class="form-block__head">
+                        <h1 class="title" data-translate="title">Реферальная программа</h1>
+                        <p class="description" data-translate="description">
+                            Добро пожаловать!
+        Вы здесь, потому что ваш друг поделился с вами уникальной ссылкой. Заполните необходимую информацию, и вы сможете воспользоваться специальным предложением от нашей реферальной программы. Желаем вам приятного опыта и хорошего дня!
+                        </p>
+                    </div>
+                    <div class="form-block__body">
+                        <form class="referal-form site-form">
+                            <div class="site-form__field" >
+                                <label>
+                                    <input type="text" name="name" placeholder="Имя" class="required" data-translate="name">
+                                </label>
+                            </div>
+                            <div class="site-form__field" >
+                                <label>
+                                    <input type="text" name="tin" placeholder="ИНН" class="required" data-translate="tin">
+                                </label>
+                            </div>
+                            <div class="site-form__field" >
+                                <label>
+                                    <input type="phone" name="phone" placeholder="Номер телефона" class="required" data-translate="phone">
+                                </label>
+                            </div>
+                            <div class="site-form__field" >
+                                <div class="select_with_search input-group">
+                                    <div class="select_with_search__row">
+                                        <input type="text" class="form-control input-text form-input required"  autocomplete="off" placeholder="Область" name="region" data-translate="region">
+                                        <input type="hidden" name="regionId">
+                                        <span class="select_with_search__arrow">
+                                            <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                <path d="M6.22481 7.89131C6.4467 7.66942 6.79391 7.64925 7.03859 7.8308L7.10869 7.89131L10.0001 10.7824L12.8915 7.89131C13.1134 7.66942 13.4606 7.64925 13.7053 7.8308L13.7754 7.89131C13.9972 8.1132 14.0174 8.46042 13.8359 8.7051L13.7754 8.77519L10.442 12.1085C10.2201 12.3304 9.87291 12.3506 9.62824 12.169L9.55814 12.1085L6.22481 8.77519C5.98073 8.53112 5.98073 8.13539 6.22481 7.89131Z" fill="#98A2B3"/>
+                                            </svg>
+                                        </span>
+                                    </div>
+                                    <ul class="select_with_search__dropdown"></ul>
+                                </div>
+                            </div>
+                            <div class="site-form__field">
+                                <label>
+                                    <input type="text" name="city" placeholder="Город" class="required" data-translate="city">
+                                </label>
+                            </div>
+                            <div class="site-form__field" data-form-input="text">
+                                <p>
+                                    <span data-translate="agreement">Нажимая кнопку активировать, вы даете согласие на обработку персональных данных, и ознакомлены с условиями</span>
+                                    <a href="#" data-translate="agreementLink">публичной оферты</a>
+                                </p>
+                            </div>
+                            <div class="site-form__field" data-form-input="submit">
+                                <label>
+                                    <button class="primary-button" data-translate="button">Активировать</button>
+                                </label>
+                            </div>
+                        </form>
+                    </div>
+                    <div class="form-block__footer">
+                        <ul class="form-block__logos">
+                            <li>
+                                <span>
+                                    <img src="images/logotype-01.svg" alt="Smart Supply">
+                                    <span>Smart Supply</span>
+                                </span>
+                            </li>
+                            <li>
+                                <span>
+                                    <img src="images/logotype-06.svg" alt="Silen">
+                                    <span>Silen</span>
+                                </span>
+                            </li>
+                            <li>
+                                <span>
+                                    <img src="images/logotype-03.svg" alt="Smart Trade">
+                                    <span>Smart Trade</span>
+                                </span>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+    <footer class="footer">
+        <div class="container">
+            <div class="footer__copyright">
+                <span data-translate="copyright">2024 © Smartpos. Все права защищены.</span>
+            </div>
+            <ul class="footer__socials">
+                <li>
+                    <a href="#">
+                        <img src="images/socials/icon-telegram.svg" alt="telegram">
+                    </a>
+                </li>
+                <li>
+                    <a href="#">
+                        <img src="images/socials/icon-facebook.svg" alt="facebook">
+                    </a>
+                </li>
+                <li>
+                    <a href="#">
+                        <img src="images/socials/icon-instagram.svg" alt="instagram">
+                    </a>
+                </li>
+            </ul>
+            <div class="footer__policy">
+                <button class="policy-modal-opener" data-translate="policy">Политика конфиденциальности</button>
+            </div>
+        </div>
+    </footer>
+
+    <script src="https://unpkg.com/imask"></script>
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/toastify-js"></script>
+    <script defer src="js/common.js"></script>
+    <script defer src="js/localization.js"></script>
+    <script defer src="js/selectWithSearch.js"></script>
+    <script defer src="js/formValidate.js"></script>
+    <script defer src="js/index.js"></script>
+</body>
+</html>
